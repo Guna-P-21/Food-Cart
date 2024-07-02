@@ -3,7 +3,7 @@ import "./Viewcart.css";
 import { cartContext } from "../App";
 
 export const Viewcart = () => {
-  const {cart, setCart}=useContext(cartContext);
+  const { cart } = useContext(cartContext);
   const [total, setTotal] = useState(0);
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc + parseInt(curr.amt), 0));
